@@ -173,18 +173,18 @@ const tick = () =>
     
     // raycaster.set(rayOrigin, rayDirection)
     
-    // const objectsToTest = [object1, object2, object3]
-    // const intersects = raycaster.intersectObjects(objectsToTest)
+    const objectsToTest = [object1, object2, object3]
+    const intersects = raycaster.intersectObjects(objectsToTest)
 
-    // for(const object of objectsToTest)
-    // {
-    //     object.material.color.set('#ff0000')
-    // }
+    for(const object of objectsToTest)
+    {
+        object.material.color.set('#ff0000')
+    }
 
-    // for(const intersect of intersects)
-    // {
-    //     intersect.object.material.color.set('#0000ff')
-    // }
+    for(const intersect of intersects)
+    {
+        intersect.object.material.color.set('#0000ff')
+    }
 
     // Cast a ray from the mouse
     // raycaster.setFromCamera(mouse, camera)
@@ -208,17 +208,17 @@ const tick = () =>
     // Cast a ray from the mouse and handle events
     raycaster.setFromCamera(mouse, camera)
 
-    const objectsToTest = [object1, object2, object3]
-    const intersects = raycaster.intersectObjects(objectsToTest)
+    const objectsToTest1 = [object1, object2, object3]
+    const intersects2 = raycaster.intersectObjects(objectsToTest1)
     
-    if(intersects.length)
+    if(intersects2.length)
     {
         if(!currentIntersect)
         {
             console.log('mouse enter')
         }
 
-        currentIntersect = intersects[0]
+        currentIntersect = intersects2[0]
     }
     else
     {
